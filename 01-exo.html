@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const text = prompt();
+        let tableau = [];
+        for (let index = 0; index < text.length; index++) {
+           tableau[index] = text[index];
+        }
+        let vide = 0;
+
+        const fonction = text  => 
+        { 
+                console.log(tableau)
+            for (index = 0; index < tableau.length; index++) 
+            {
+                let index2 = 0
+                for (index2 ; index2 < tableau.length; index2++)
+                {
+                    if (index == index2) {
+                        index2 = index+1;
+                        
+                    }
+                    // console.log(`index=${tableau[index]}-${index} index2=${tableau[index2]}-${index2}`)
+                    if ((tableau[index]!=tableau[index2]) && index2==tableau.length-1) 
+                    {
+
+                        vide = 1;
+                        return console.log("le caractère repéré est: ",tableau[index]),vide ;
+                    }
+                    else if (tableau[index] == tableau[index2])
+                    {
+                        // console.log("*******************");
+                        index2 = tableau.length;
+                    }
+                }
+            }
+            if (vide == 0) {
+                console.log("null")
+            }
+        }
+        fonction();
+    </script>
+</body>
+</html>
