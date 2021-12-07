@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const fonction = (tableau) =>
+        {
+            function getRandomInt(max) 
+            {
+                return Math.floor(Math.random() * max);
+            }
+            if(Array.isArray(tableau)==false){
+                console.log("erreur - votre tableau est vide");
+            }
+            else if(tableau.length==0){
+                console.log("erreur - votre tableau est vide");
+            }
+            else {
+            a = getRandomInt(tableau.length);
+            console.log(tableau[a]);
+            }
+        }
+        fonction(["a","b","c","d","e"]);
+    </script>
+</body>
+</html>

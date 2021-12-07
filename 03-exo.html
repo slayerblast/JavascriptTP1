@@ -8,11 +8,15 @@
 </head>
 <body>
     <script>
-        const fonction = (a,b) =>{
-        
+        const fonction = (a,b) =>
+        {
+            let union = a.concat(b);
+            union = union.filter((item,index)=>union.indexOf(item)==index);
+            console.log(union);
         }
-
-        fonction(["a","z","e"])
+        fonction(["a","b"],["c","d"]);
+        fonction(["a","b"],["a","d"]);
+        fonction(["a","b","a"],["a","d","b","a"]);
     </script>
 </body>
 </html>
